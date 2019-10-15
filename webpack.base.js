@@ -1,7 +1,7 @@
 const {resolve} = require("path");
-const webpack = require("webpack");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
     resolve: {
@@ -14,7 +14,7 @@ const config = {
             "@std": resolve(__dirname, "src/scripts/std"),
         },
 
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".css"],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
     },
 
     output: {
@@ -51,6 +51,25 @@ const config = {
                 test: /\.eot$/,
                 loader: "url-loader?limit=65536&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]",
             },
+            {
+                test: /\.[tj]sx?$/,
+                use: ["babel-loader"],
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    "css-loader",
+                    "sass-loader"
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
 
@@ -64,11 +83,10 @@ const config = {
 
     plugins: [
         new CleanWebpackPlugin({
-                root: resolve(__dirname, "."),
-                verbose: true,
-                dry: false
-            }
-        ),
+            root: resolve(__dirname, "."),
+            verbose: true,
+            dry: false
+        }),
 
         new CopyWebpackPlugin(
             [
@@ -78,6 +96,11 @@ const config = {
                 },
             ]
         ),
+
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+            chunkFilename: "css/[id].css",
+        }),
     ],
 };
 

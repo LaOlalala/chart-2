@@ -3,8 +3,8 @@ const base = require("./webpack.base");
 
 module.exports = merge(base, {
     entry: {
-        main: [
-            "./scripts/main.js",
+        "main": [
+            "./main.js",
         ],
     },
 
@@ -12,24 +12,6 @@ module.exports = merge(base, {
 
     output: {
         filename: "js/[name].js",
-    },
-
-    module: {
-        rules: [
-            {
-                test: /\.[tj]sx?$/,
-                use: ["babel-loader"],
-                exclude: /node_modules/,
-            },
-            {
-                test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"],
-            },
-            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
-            },
-        ],
     },
 
     plugins: [],
