@@ -11,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -22,6 +23,7 @@
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
     "@types/classnames": "^2.2.9",
+    "@types/jest": "^24.0.19",
     "@types/urijs": "^1.19.4",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/parser": "^2.3.3",
@@ -35,6 +37,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "nunjucks": "^3.2.0",
@@ -44,6 +47,7 @@
     "stylelint": "^11.1.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.11.1",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.6.4",
     "urijs": "^1.19.1",
     "webpack": "^4.41.1",
