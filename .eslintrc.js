@@ -15,6 +15,9 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "@typescript-eslint/no-explicit-any": [
+            0
+        ],
         "max-len": [
             1,
             120

@@ -2,6 +2,7 @@ const {resolve} = require("path");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
 
 const config = {
     resolve: {
@@ -101,6 +102,15 @@ const config = {
             filename: "css/[name].css",
             chunkFilename: "css/[id].css",
         }),
+
+        new NunjucksWebpackPlugin({
+            templates: [
+                {
+                    from: "./src/pages/main.njk",
+                    to: "./main.html",
+                },
+            ],
+        })
     ],
 };
 

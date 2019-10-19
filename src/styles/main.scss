@@ -1,0 +1,17 @@
+.welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        border-radius: 10px;
+        width: 230px;
+        height: 230px;
+        background-image: url(https://i.pinimg.com/236x/0a/61/8e/0a618e31177ed7659a8d963827f54b17--square-faces-animal-faces.jpg);
+    }
+}
