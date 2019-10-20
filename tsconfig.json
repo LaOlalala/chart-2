@@ -26,20 +26,14 @@
     "baseUrl": ".",
     "paths": {
       "@main/*": [
-        "src/scripts/main/*"
+        "./src/scripts/main/*"
       ],
       "@std/*": [
-        "src/scripts/std/*"
+        "./src/scripts/std/*"
       ]
     },
     "typeRoots": [
       "./node_modules/@types"
     ]
-  },
-  "include": [
-    "src/scripts/std/types/*",
-    "src/scripts/std/types/**/*",
-    "src/scripts/main/types/*",
-    "src/scripts/main/types/**/*"
-  ]
+  }
 }

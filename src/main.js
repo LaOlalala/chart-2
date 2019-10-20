@@ -6,4 +6,3 @@ window.App = App.getInstance({
         "second_level": "value",
     },
 });
-
