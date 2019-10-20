@@ -13,6 +13,7 @@ const config = {
         alias: {
             "@main": resolve(__dirname, "src/scripts/main"),
             "@std": resolve(__dirname, "src/scripts/std"),
+            "@styles": resolve(__dirname, "src/styles"),
         },
 
         extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
