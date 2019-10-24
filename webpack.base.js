@@ -1,4 +1,5 @@
 const {resolve} = require("path");
+const fs = require('fs');
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -97,12 +98,18 @@ const config = {
         }),
 
         new NunjucksWebpackPlugin({
-            templates: [
-                {
-                    from: "./src/pages/main.njk",
-                    to: "./main.html",
-                },
-            ],
+            templates: fs.readdirSync(resolve(__dirname, "./src/pages")).reduce((acc, file) => {
+                const matches = file.match(/^([a-zA-Z0-9][a-zA-Z0-9_-]+)\.njk/);
+
+                if (matches) {
+                    return [...acc, {
+                        from: `./src/pages/${file}`,
+                        to: `./${matches[1]}.html`,
+                    }]
+                }
+
+                return acc;
+            }, []),
         })
     ],
 
