@@ -12,7 +12,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "test": "jest"
+    "test": "jest",
+    "dev-sever": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -53,6 +54,7 @@
     "urijs": "^1.19.1",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
   },
   "husky": {

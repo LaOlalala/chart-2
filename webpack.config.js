@@ -1,18 +1,14 @@
 const merge = require("webpack-merge");
+const path = require("path");
 const base = require("./webpack.base");
 
 module.exports = merge(base, {
-    entry: {
-        "main": [
-            "./main.js",
-        ],
-    },
-
     devtool: "eval",
 
-    output: {
-        filename: "js/[name].js",
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9966,
+        writeToDisk: true
     },
-
-    plugins: [],
 });

@@ -5,25 +5,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
 
 const config = {
-    resolve: {
-        modules: [
-            "node_modules",
-        ],
-
-        alias: {
-            "@main": resolve(__dirname, "src/scripts/main"),
-            "@std": resolve(__dirname, "src/scripts/std"),
-            "@styles": resolve(__dirname, "src/styles"),
-        },
-
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
-    },
-
-    output: {
-        path: resolve(__dirname, "dist"),
-    },
-
     context: resolve(__dirname, "src"),
+
+    entry: {
+        "main": [
+            "./main.js",
+        ],
+    },
 
     mode: "development",
 
@@ -75,6 +63,10 @@ const config = {
         ],
     },
 
+    output: {
+        filename: "js/[name].js",
+    },
+
     optimization: {
         splitChunks: {
             name: "common",
@@ -113,6 +105,20 @@ const config = {
             ],
         })
     ],
+
+    resolve: {
+        modules: [
+            "node_modules",
+        ],
+
+        alias: {
+            "@main": resolve(__dirname, "src/scripts/main"),
+            "@std": resolve(__dirname, "src/scripts/std"),
+            "@styles": resolve(__dirname, "src/styles"),
+        },
+
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
+    },
 };
 
 module.exports = config;
