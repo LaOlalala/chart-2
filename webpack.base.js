@@ -58,6 +58,16 @@ const config = {
                 ],
             },
             {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    "css-loader",
+                    "less-loader"
+                ],
+            },
+            {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
             },
@@ -124,7 +134,7 @@ const config = {
             "@styles": resolve(__dirname, "src/styles"),
         },
 
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less"],
     },
 };
 
