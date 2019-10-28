@@ -54,8 +54,15 @@ const config = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
-                    "css-loader",
-                    "sass-loader"
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: false,
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                    },
                 ],
             },
             {
@@ -64,8 +71,15 @@ const config = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
-                    "css-loader",
-                    "less-loader"
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: false,
+                        },
+                    },
+                    {
+                        loader: "less-loader",
+                    },
                 ],
             },
             {
