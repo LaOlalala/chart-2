@@ -13,7 +13,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "test": "jest",
-    "dev-sever": "webpack-dev-server",
+    "dev-server": "webpack-dev-server",
     "release": "webpack --config webpack.production.js"
   },
   "dependencies": {
