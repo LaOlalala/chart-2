@@ -1,5 +1,6 @@
 const {resolve} = require("path");
-const fs = require('fs');
+const webpack = require("webpack");
+const fs = require("fs");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -14,8 +15,6 @@ const config = {
             "./main.js",
         ],
     },
-
-    mode: "development",
 
     module: {
         rules: [
@@ -94,11 +93,17 @@ const config = {
     },
 
     optimization: {
+        runtimeChunk: "single",
         splitChunks: {
-            name: "common",
-            minChunks: 2,
-            chunks: "all"
-        },
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendors",
+                    enforce: true,
+                    chunks: "all"
+                }
+            }
+        }
     },
 
     plugins: [
@@ -116,6 +121,10 @@ const config = {
                 },
             ]
         ),
+
+        new ExtraWatchWebpackPlugin({
+            dirs: ["src/pages"],
+        }),
 
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
@@ -143,8 +152,8 @@ const config = {
             },
         }),
 
-        new ExtraWatchWebpackPlugin({
-            dirs: ["src/pages"],
+        new webpack.ProvidePlugin({
+            $: "jquery",
         }),
     ],
 
