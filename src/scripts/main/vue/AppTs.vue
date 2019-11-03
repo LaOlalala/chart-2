@@ -15,10 +15,16 @@
 
 <style lang="scss">
     .vue-ts-app {
-        p {
+        .vue-ts-component p {
             font-size: 14px;
             text-align: center;
             color: darkblue;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
         }
     }
 </style>
