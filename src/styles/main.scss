@@ -1,3 +1,7 @@
+* {
+    font-family: "Ubuntu", sans-serif;
+}
+
 .welcome {
     position: absolute;
     top: 0;
@@ -7,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     &__image {
         border-radius: 10px;

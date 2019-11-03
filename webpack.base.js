@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 const config = {
     context: resolve(__dirname, "src"),
@@ -85,6 +86,10 @@ const config = {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
             },
+            {
+                test: /\.vue$/,
+                loader: "vue-loader"
+            }
         ],
     },
 
@@ -110,7 +115,8 @@ const config = {
         new CleanWebpackPlugin({
             root: resolve(__dirname, "."),
             verbose: true,
-            dry: false
+            dry: false,
+            cleanStaleWebpackAssets: false,
         }),
 
         new CopyWebpackPlugin(
@@ -155,6 +161,8 @@ const config = {
         new webpack.ProvidePlugin({
             $: "jquery",
         }),
+
+        new VueLoaderPlugin(),
     ],
 
     resolve: {
@@ -168,7 +176,7 @@ const config = {
             "@styles": resolve(__dirname, "src/styles"),
         },
 
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less"],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less", ".vue"],
     },
 };
 
