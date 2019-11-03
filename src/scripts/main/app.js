@@ -1,7 +1,8 @@
 import Vue from "vue/dist/vue.js";
 
 import {App as StdApp} from "@std/app";
-import VueApp from "@main/vue/App";
+import VueJsApp from "@main/vue/AppJs";
+import VueTsApp from "@main/vue/AppTs";
 
 export class App extends StdApp {
     constructor(config) {
@@ -9,9 +10,16 @@ export class App extends StdApp {
 
         /* eslint-disable no-new */
         new Vue({
-            el: "#vue-app",
+            el: "#vue-js-app",
             // eslint-disable-next-line
-            render: h => h(VueApp)
-        })
+            render: h => h(VueJsApp)
+        });
+
+        /* eslint-disable no-new */
+        new Vue({
+            el: "#vue-ts-app",
+            // eslint-disable-next-line
+            render: h => h(VueTsApp)
+        });
     }
 }

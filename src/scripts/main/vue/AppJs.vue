@@ -1,23 +1,24 @@
 <template>
-    <div class="vue-app">
+    <div class="vue-js-app">
         <p>{{ msg }}</p>
     </div>
 </template>
 
 <script>
     export default {
-        name: "vue-app",
+        name: "vue-js-app",
         data: ()  => ({
-            msg: "Приложение на Vue"
+            msg: "Vue: однофайловое приложение (JS)"
         }),
     }
 </script>
 
 <style lang="scss">
-    .vue-app {
+    .vue-js-app {
         p {
-            font-size: 18px;
+            font-size: 14px;
             text-align: center;
+            color: lightseagreen;
         }
     }
 </style>
