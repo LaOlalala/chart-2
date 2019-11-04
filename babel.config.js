@@ -1,12 +1,12 @@
-{
+module.exports = {
     "presets": [
-        "@babel/preset-env",
-        "@babel/preset-react"
+        ["@babel/env"],
+        ["@babel/react"],
+        ["babel-preset-typescript-vue"]
     ],
     "plugins": [
-        "@babel/plugin-transform-typescript",
         ["@babel/plugin-proposal-decorators", {"legacy": true}],
         ["@babel/proposal-class-properties", {"loose": true}],
         "@babel/proposal-object-rest-spread"
     ]
-}
+};

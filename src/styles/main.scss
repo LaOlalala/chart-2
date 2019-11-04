@@ -31,3 +31,19 @@
         width: 187px;
     }
 }
+
+.demos {
+    margin-top: 24px;
+    border-radius: 11px;
+    background-color: antiquewhite;
+    padding: 0 10px;
+    width: 213px;
+
+    .react-stateless-app {
+        p {
+            font-size: 14px;
+            text-align: center;
+            color: coral;
+        }
+    }
+}

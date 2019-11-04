@@ -45,7 +45,11 @@ const config = {
             },
             {
                 test: /\.[tj]sx?$/,
-                use: ["babel-loader"],
+                use: [
+                    {
+                        loader: "babel-loader",
+                    }
+                ],
                 exclude: /node_modules/,
             },
             {
@@ -138,24 +142,23 @@ const config = {
         }),
 
         new NunjucksWebpackPlugin({
-            templates: fs.readdirSync(resolve(__dirname, "./src/pages")).reduce((acc, file) => {
-                const matches = file.match(/^([a-zA-Z0-9][a-zA-Z0-9_-]+)\.njk/);
+            templates: fs.readdirSync(resolve(__dirname, "./src/pages"))
+                .reduce((acc, file) => {
+                    const matches = file.match(/^([a-zA-Z0-9][a-zA-Z0-9_-]+)\.njk/);
 
-                if (matches) {
-                    return [...acc, {
-                        from: `./src/pages/${file}`,
-                        to: `./${matches[1]}.html`,
-                    }]
-                }
+                    if (matches) {
+                        return [...acc, {
+                            from: `./src/pages/${file}`,
+                            to: `./${matches[1]}.html`,
+                        }];
+                    }
 
-                return acc;
-            }, []),
+                    return acc;
+                }, []),
 
             writeToFileEmit: true,
 
-            configure: {
-
-            },
+            configure: {},
         }),
 
         new webpack.ProvidePlugin({

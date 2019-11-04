@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<script>
+<script lang="js">
     import DemoTs from "./components/DemoTs";
 
     export default {
