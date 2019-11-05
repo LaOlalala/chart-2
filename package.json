@@ -1,7 +1,7 @@
 {
   "name": "@machaon/std-frontend",
   "version": "0.1.0",
-  "description": "Система сборки стилей, скриптов и страниц для использования в Bitrix-проектах",
+  "description": "Универсальная система сборки стилей, скриптов и страниц (JS/TS, SASS/LESS, React/Vue, Nunjucks, Jest)",
   "private": true,
   "repository": {
     "type": "git",
