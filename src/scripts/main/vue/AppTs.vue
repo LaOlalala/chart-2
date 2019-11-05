@@ -5,11 +5,11 @@
 </template>
 
 <script lang="js">
-    import DemoTs from "./components/DemoTs";
+    import DemoTs from "./components/Demo.ts";
 
     export default {
+        name: "VueTsApp",
         components: {DemoTs},
-        name: "vue-ts-app",
     }
 </script>
 

@@ -1,7 +1,8 @@
 <template>
     <div class="vue-ts-component">
-        <p @click="onClick">{{ title }}</p>
-
+        <p @click="onClick">
+            {{ title }}
+        </p>
         <p>
             <button @click="state.increase()">
                 MobX-Vue: {{ state.counter }}

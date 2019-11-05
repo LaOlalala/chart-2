@@ -6,11 +6,11 @@
 
 <script lang="js">
     export default {
-        name: "vue-js-app",
-        data: ()  => ({
+        name: "VueJsApp",
+        data: () => ({
             msg: "Vue: однофайловое приложение (JS)"
         }),
-    }
+    };
 </script>
 
 <style lang="scss">
