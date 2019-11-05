@@ -8,10 +8,12 @@ import VueJsApp from "@main/vue/AppJs";
 import VueTsApp from "@main/vue/AppTs";
 
 import {StatelessApp} from "@main/react/StatelessApp";
+import {StatefulApp} from "@main/react/StatefulApp";
+import {MobXApp} from "@main/react/MobXApp";
 
 export class App extends StdApp {
-    constructor(config) {
-        super(config);
+    constructor() {
+        super();
 
         /* eslint-disable no-new */
         new Vue({
@@ -31,5 +33,19 @@ export class App extends StdApp {
             React.createElement(StatelessApp, {}, null),
             document.getElementById("react-stateless-app")
         );
+
+        ReactDOM.render(
+            React.createElement(StatefulApp, {}, null),
+            document.getElementById("react-stateful-app")
+        );
+
+        ReactDOM.render(
+            React.createElement(MobXApp, {}, null),
+            document.getElementById("react-mobx-app")
+        );
+    }
+
+    loadConfig(config) {
+        super.loadConfig(config);
     }
 }

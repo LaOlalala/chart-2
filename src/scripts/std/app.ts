@@ -4,8 +4,14 @@ import {Singleton} from "@std/base/Singleton";
 import {isJsonMap} from "@std/guards";
 
 export class App extends Singleton {
-    public constructor(protected config: JsonMap = {}) {
-        super(config);
+    protected config: JsonMap = {};
+
+    public constructor() {
+        super();
+    }
+
+    public loadConfig(config: JsonMap): void {
+        this.config = config;
     }
 
     public getOption(optionName: string, defaultValue?: any): JsonValue {

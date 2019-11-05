@@ -39,11 +39,26 @@
     padding: 0 10px;
     width: 213px;
 
-    .react-stateless-app {
+    .react-stateless-app,
+    .react-stateful-app,
+    .react-mobx-app {
         p {
             font-size: 14px;
             text-align: center;
             color: coral;
+        }
+
+        &.react-stateless-app p {
+            color: coral;
+        }
+
+        &.react-stateful-app p {
+            color: blueviolet;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
         }
     }
 }

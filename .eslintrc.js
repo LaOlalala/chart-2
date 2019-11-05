@@ -120,10 +120,15 @@ module.exports = {
                 "sourceType": "module",
                 "project": "./tsconfig.json",
                 "extraFileExtensions": [".ts.vue"],
+                // https://github.com/typescript-eslint/typescript-eslint/issues/967
+                "createDefaultProgram": true,
             },
             "plugins": ["react", "@typescript-eslint"],
             "rules": {
                 "@typescript-eslint/no-explicit-any": [
+                    0
+                ],
+                "@typescript-eslint/no-non-null-assertion": [
                     0
                 ],
             },
