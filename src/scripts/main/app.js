@@ -44,8 +44,4 @@ export class App extends StdApp {
             document.getElementById("react-mobx-app")
         );
     }
-
-    loadConfig(config) {
-        super.loadConfig(config);
-    }
 }
