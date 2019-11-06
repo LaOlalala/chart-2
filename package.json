@@ -1,6 +1,6 @@
 {
   "name": "@machaon/std-frontend",
-  "version": "0.1.0",
+  "version": "0.1.0-beta",
   "description": "Универсальная система сборки стилей, скриптов и страниц (JS/TS, SASS/LESS, React/Vue, Nunjucks, Jest)",
   "private": true,
   "repository": {
