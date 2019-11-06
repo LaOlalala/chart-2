@@ -123,7 +123,7 @@ module.exports = {
                 // https://github.com/typescript-eslint/typescript-eslint/issues/967
                 "createDefaultProgram": true,
             },
-            "plugins": ["react", "@typescript-eslint"],
+            "plugins": ["react", "vue", "@typescript-eslint"],
             "rules": {
                 "@typescript-eslint/no-explicit-any": [
                     0
