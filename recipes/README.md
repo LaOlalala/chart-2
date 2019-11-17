@@ -11,3 +11,5 @@
 [Как подключить normalize.css](03-normalize-css.md)
 
 [Как организовать Javascript](04-scripts.md)
+
+[Как добавить в сборку jQuery](05-add-jquery.md)
