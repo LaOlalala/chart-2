@@ -103,6 +103,6 @@ about.njk — страница "О нас", main.njk — главная стра
 
 Когда все скомпилируется, открываем в браузере http://localhost:9966/main.html и видим главную страницу, которая пока состоит только из меню и заголовка:
 
-![Main page](https://image.prntscr.com/image/qw3FTr08QlWxS4qmchViMw.png)
+![Main page](images/00-html.png)
 
 Дальше все в ваших руках.

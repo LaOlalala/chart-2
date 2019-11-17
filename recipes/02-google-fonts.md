@@ -12,5 +12,5 @@
 
 Пересобираем, проверяем:
 
-![Font imported](https://image.prntscr.com/image/EvHF6HstSS_rZMHlYdFFgQ.png)
+![Font imported](images/02-google-fonts.png)
 
