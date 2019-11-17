@@ -7,3 +7,5 @@
 [Как организовать работу с CSS](01-css.md)
 
 [Как подключить шрифт с Google Fonts](02-google-fonts.md)
+
+[Как подключить normalize.css](03-normalize-css.md)
