@@ -31,5 +31,5 @@
 
 И убеждаемся, что стили применились:
 
-![Basic styles](https://image.prntscr.com/image/MiLJMCxPQN2FN2TjvnPqQg.png)
+![Basic styles](images/01-css.png)
 

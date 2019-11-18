@@ -7,3 +7,11 @@
 [Как организовать работу с CSS](01-css.md)
 
 [Как подключить шрифт с Google Fonts](02-google-fonts.md)
+
+[Как подключить normalize.css](03-normalize-css.md)
+
+[Как организовать Javascript](04-scripts.md)
+
+[Как добавить в сборку jQuery](05-add-jquery.md)
+
+[Как проверить, хороший ли код я пишу](06-linter.md)
