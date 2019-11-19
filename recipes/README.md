@@ -17,3 +17,5 @@
 [Как проверить, хороший ли код я пишу](06-linter.md)
 
 [Как добавить в сборку Bootstrap](07-bootstrap.md)
+
+[Как изолировать js-логику](08-incapsulate-js-logic.md)
