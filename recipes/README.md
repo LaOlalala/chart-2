@@ -21,3 +21,5 @@
 [Как изолировать js-логику](08-incapsulate-js-logic.md)
 
 [Как подключить jQuery-слайдер (геморно)](09-using-jquery-plugins-hard.md)
+
+[Как подключить нормальный слайдер (легко и просто)](10-using-webpack-ready-plugins-easy.md)
