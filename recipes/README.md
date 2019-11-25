@@ -25,3 +25,5 @@
 [Как подключить нормальный слайдер (легко и просто)](10-using-webpack-ready-plugins-easy.md)
 
 [Как работать со стандартной js-библиотекой Machaon](11-machaon-std.md)
+
+[Как задействовать в верстке React.js](12-add-react.md)
