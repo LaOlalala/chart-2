@@ -31,3 +31,5 @@
 [Как задействовать в верстке Vue.js](13-add-vue.md)
 
 [Композиция компонентов](14-component-composition.md)
+
+[Обмен данными между компонентами](15-share-data-between-components.md)
