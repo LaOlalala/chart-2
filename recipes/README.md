@@ -29,3 +29,5 @@
 [Как задействовать в верстке React.js](12-add-react.md)
 
 [Как задействовать в верстке Vue.js](13-add-vue.md)
+
+[Композиция компонентов](14-component-composition.md)
