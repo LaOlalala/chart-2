@@ -23,3 +23,13 @@
 [Как подключить jQuery-слайдер (геморно)](09-using-jquery-plugins-hard.md)
 
 [Как подключить нормальный слайдер (легко и просто)](10-using-webpack-ready-plugins-easy.md)
+
+[Как работать со стандартной js-библиотекой Machaon](11-machaon-std.md)
+
+[Как задействовать в верстке React.js](12-add-react.md)
+
+[Как задействовать в верстке Vue.js](13-add-vue.md)
+
+[Композиция компонентов](14-component-composition.md)
+
+[Обмен данными между компонентами](15-share-data-between-components.md)
