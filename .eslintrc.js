@@ -86,10 +86,11 @@ module.exports = {
             2,
             "double"
         ],
-        "space-before-function-paren": [
-            2,
-            "never"
-        ],
+        "space-before-function-paren": [2, {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
     },
     "settings": {"react": {"version": "detect"}},
     "overrides": [
