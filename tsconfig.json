@@ -19,6 +19,7 @@
     "noImplicitThis": true,
     "preserveConstEnums": true,
     "pretty": true,
+    "resolveJsonModule": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,

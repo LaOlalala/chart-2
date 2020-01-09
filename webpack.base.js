@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const config = {
     context: resolve(__dirname, "src"),
@@ -166,6 +167,8 @@ const config = {
         }),
 
         new VueLoaderPlugin(),
+
+        // new BundleAnalyzerPlugin(),
     ],
 
     resolve: {
@@ -179,7 +182,7 @@ const config = {
             "@styles": resolve(__dirname, "src/styles"),
         },
 
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less", ".vue"],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less", ".vue", ".json"],
     },
 };
 

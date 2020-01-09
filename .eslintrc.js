@@ -86,10 +86,11 @@ module.exports = {
             2,
             "double"
         ],
-        "space-before-function-paren": [
-            2,
-            "never"
-        ],
+        "space-before-function-paren": [2, {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
     },
     "settings": {"react": {"version": "detect"}},
     "overrides": [
@@ -123,7 +124,7 @@ module.exports = {
                 // https://github.com/typescript-eslint/typescript-eslint/issues/967
                 "createDefaultProgram": true,
             },
-            "plugins": ["react", "@typescript-eslint"],
+            "plugins": ["react", "vue", "@typescript-eslint"],
             "rules": {
                 "@typescript-eslint/no-explicit-any": [
                     0
