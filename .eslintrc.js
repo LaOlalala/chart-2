@@ -13,7 +13,10 @@ module.exports = {
     "parser": "vue-eslint-parser",
     "parserOptions": {
         "parser": "babel-eslint",
-        "ecmaFeatures": {"jsx": true},
+        "ecmaFeatures": {
+            "jsx": true,
+            "legacyDecorators": true,
+        },
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
