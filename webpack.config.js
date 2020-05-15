@@ -9,7 +9,10 @@ module.exports = merge(base, {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
         port: 9966,
-        writeToDisk: true
+        writeToDisk: true,
+        disableHostCheck: true,
+        hot: false,
+        inline: false,
     },
 
     mode: "development",
