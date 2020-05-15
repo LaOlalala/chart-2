@@ -66,6 +66,9 @@ const config = {
                         },
                     },
                     {
+                        loader: "postcss-loader",
+                    },
+                    {
                         loader: "sass-loader",
                     },
                 ],
@@ -83,13 +86,16 @@ const config = {
                         },
                     },
                     {
+                        loader: "postcss-loader",
+                    },
+                    {
                         loader: "less-loader",
                     },
                 ],
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                use: ["style-loader", "css-loader", "postcss-loader"],
             },
             {
                 test: /\.vue$/,
@@ -184,7 +190,7 @@ const config = {
             "@main": resolve(__dirname, "src/scripts/main"),
             "@std": resolve(__dirname, "src/scripts/std"),
             "@styles": resolve(__dirname, "src/styles"),
-            "vue": "vue/dist/vue.esm.js",
+            "vue": "vue/dist/vue.esmq.js",
         },
 
         extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less", ".vue", ".json"],
