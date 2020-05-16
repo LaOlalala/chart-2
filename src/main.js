@@ -3,5 +3,5 @@ import "@styles/main.less";
 
 import {App} from "@main/app";
 
-window.App = App.getInstance();
-window.App.loadConfig({});
+window.App = new App();
+window.App.run();

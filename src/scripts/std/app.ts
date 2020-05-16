@@ -1,14 +1,15 @@
 import URI from "urijs";
 
-import {Singleton} from "@std/base/Singleton";
 import {isJsonMap} from "@std/guards";
 
-export class App extends Singleton {
+export abstract class App {
     protected config: JsonMap = {};
 
-    public constructor() {
-        super();
+    protected constructor(config: JsonMap = {}) {
+        this.loadConfig(config);
     }
+
+    public abstract run(): void;
 
     public loadConfig(config: JsonMap): void {
         this.config = config;

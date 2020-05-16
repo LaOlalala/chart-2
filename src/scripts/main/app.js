@@ -12,9 +12,11 @@ import {StatefulApp} from "@main/react/StatefulApp";
 import {MobXApp} from "@main/react/MobXApp";
 
 export class App extends StdApp {
-    constructor() {
-        super();
+    constructor(config = {}) {
+        super(config);
+    }
 
+    run() {
         /* eslint-disable no-new */
         new Vue({
             el: "#vue-js-app",
