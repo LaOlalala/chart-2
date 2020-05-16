@@ -190,7 +190,7 @@ const config = {
             "@main": resolve(__dirname, "src/scripts/main"),
             "@std": resolve(__dirname, "src/scripts/std"),
             "@styles": resolve(__dirname, "src/styles"),
-            "vue": "vue/dist/vue.esmq.js",
+            "vue": "vue/dist/vue.esm.js",
         },
 
         extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less", ".vue", ".json"],
