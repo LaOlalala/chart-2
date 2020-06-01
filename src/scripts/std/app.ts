@@ -42,7 +42,7 @@ export abstract class App {
         const uri = URI(url);
 
         const segments = uri.segment();
-        const languages = this.getOption("main.loc.languages");
+        const languages = this.getOption("loc.languages");
 
         if (!languages || (typeof languages !== "object")) {
             throw new Error("Не определены поддерживаемые сайтом языки.")
@@ -54,7 +54,7 @@ export abstract class App {
             segments.shift();
         }
 
-        if (lang !== this.getOption("main.loc.default_language")) {
+        if (lang !== this.getOption("loc.default_language")) {
             segments.unshift(lang);
         }
 
