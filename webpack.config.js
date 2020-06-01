@@ -13,6 +13,9 @@ module.exports = merge(base, {
         disableHostCheck: true,
         hot: false,
         inline: false,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        }
     },
 
     mode: "development",
