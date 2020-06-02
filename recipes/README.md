@@ -8,28 +8,26 @@
 
 [Как подключить шрифт с Google Fonts](02-google-fonts.md)
 
-[Как подключить normalize.css](03-normalize-css.md)
+[Как организовать Javascript](03-scripts.md)
 
-[Как организовать Javascript](04-scripts.md)
+[Как добавить в сборку jQuery](04-add-jquery.md)
 
-[Как добавить в сборку jQuery](05-add-jquery.md)
+[Как проверить, хороший ли код я пишу](05-linter.md)
 
-[Как проверить, хороший ли код я пишу](06-linter.md)
+[Как добавить в сборку Bootstrap](06-bootstrap.md)
 
-[Как добавить в сборку Bootstrap](07-bootstrap.md)
+[Как изолировать js-логику](07-incapsulate-js-logic.md)
 
-[Как изолировать js-логику](08-incapsulate-js-logic.md)
+[Как подключить jQuery-слайдер (геморно)](08-using-jquery-plugins-hard.md)
 
-[Как подключить jQuery-слайдер (геморно)](09-using-jquery-plugins-hard.md)
+[Как подключить нормальный слайдер (легко и просто)](09-using-webpack-ready-plugins-easy.md)
 
-[Как подключить нормальный слайдер (легко и просто)](10-using-webpack-ready-plugins-easy.md)
+[Как работать со стандартной js-библиотекой Machaon](10-machaon-std.md)
 
-[Как работать со стандартной js-библиотекой Machaon](11-machaon-std.md)
+[Как задействовать в верстке React.js](11-add-react.md)
 
-[Как задействовать в верстке React.js](12-add-react.md)
+[Как задействовать в верстке Vue.js](12-add-vue.md)
 
-[Как задействовать в верстке Vue.js](13-add-vue.md)
+[Композиция компонентов](13-component-composition.md)
 
-[Композиция компонентов](14-component-composition.md)
-
-[Обмен данными между компонентами](15-share-data-between-components.md)
+[Обмен данными между компонентами](14-share-data-between-components.md)

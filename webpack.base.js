@@ -66,6 +66,14 @@ const config = {
                         },
                     },
                     {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: [
+                                require("autoprefixer")
+                            ]
+                        }
+                    },
+                    {
                         loader: "sass-loader",
                     },
                 ],
@@ -81,6 +89,14 @@ const config = {
                         options: {
                             url: false,
                         },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: [
+                                require("autoprefixer")
+                            ]
+                        }
                     },
                     {
                         loader: "less-loader",
@@ -164,6 +180,7 @@ const config = {
 
         new webpack.ProvidePlugin({
             $: "jquery",
+            jQuery: "jquery" // Необходимо для работы некоторых плагинов (напр. FancyBox 3)
         }),
 
         new VueLoaderPlugin(),
