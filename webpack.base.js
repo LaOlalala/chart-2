@@ -105,7 +105,7 @@ const config = {
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                use: ["style-loader", "css-loader", "postcss-loader"],
             },
             {
                 test: /\.vue$/,
@@ -186,6 +186,10 @@ const config = {
         new VueLoaderPlugin(),
 
         // new BundleAnalyzerPlugin(),
+
+        new webpack.DefinePlugin({
+            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
+        }),
     ],
 
     resolve: {
@@ -197,6 +201,7 @@ const config = {
             "@main": resolve(__dirname, "src/scripts/main"),
             "@std": resolve(__dirname, "src/scripts/std"),
             "@styles": resolve(__dirname, "src/styles"),
+            "vue": "vue/dist/vue.esm.js",
         },
 
         extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss", ".less", ".vue", ".json"],

@@ -1,4 +1,4 @@
-import Vue from "vue/dist/vue.js";
+import Vue from "vue";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -12,9 +12,11 @@ import {StatefulApp} from "@main/react/StatefulApp";
 import {MobXApp} from "@main/react/MobXApp";
 
 export class App extends StdApp {
-    constructor() {
-        super();
+    constructor(config = {}) {
+        super(config);
+    }
 
+    run() {
         /* eslint-disable no-new */
         new Vue({
             el: "#vue-js-app",

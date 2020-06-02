@@ -1,14 +1,15 @@
 import URI from "urijs";
 
-import {Singleton} from "@std/base/Singleton";
 import {isJsonMap} from "@std/guards";
 
-export class App extends Singleton {
+export abstract class App {
     protected config: JsonMap = {};
 
-    public constructor() {
-        super();
+    protected constructor(config: JsonMap = {}) {
+        this.loadConfig(config);
     }
+
+    public abstract run(): void;
 
     public loadConfig(config: JsonMap): void {
         this.config = config;
@@ -41,7 +42,7 @@ export class App extends Singleton {
         const uri = URI(url);
 
         const segments = uri.segment();
-        const languages = this.getOption("main.loc.languages");
+        const languages = this.getOption("loc.languages");
 
         if (!languages || (typeof languages !== "object")) {
             throw new Error("Не определены поддерживаемые сайтом языки.")
@@ -53,7 +54,7 @@ export class App extends Singleton {
             segments.shift();
         }
 
-        if (lang !== this.getOption("main.loc.default_language")) {
+        if (lang !== this.getOption("loc.default_language")) {
             segments.unshift(lang);
         }
 

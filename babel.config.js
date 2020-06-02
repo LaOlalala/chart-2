@@ -5,16 +5,11 @@ module.exports = {
             useBuiltIns: "usage",
         }],
         ["@babel/react"],
-        ["babel-preset-typescript-vue"],
+        [require("./babel.preset.pre-typescript")],
+        ["babel-preset-typescript-vue", {
+            allowDeclareFields: true,
+        }],
+        [require("./babel.preset.post-typescript")],
     ],
-    "plugins": [
-        ["@babel/plugin-proposal-decorators", {
-            "legacy": true
-        }],
-        ["@babel/proposal-class-properties", {
-            "loose": true
-        }],
-        ["@babel/plugin-proposal-optional-chaining"],
-        ["@babel/proposal-object-rest-spread"],
-    ]
+    "plugins": []
 };
