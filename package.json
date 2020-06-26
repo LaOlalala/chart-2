@@ -16,10 +16,12 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue src tests",
     "check": "npm run test && npm run lint",
     "dev-server": "webpack-dev-server",
+    "network-server": "webpack-dev-server --host 0.0.0.0",
     "release": "webpack --config webpack.production.js"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -39,9 +41,9 @@
     "@types/react-dom": "^16.9.8",
     "@types/urijs": "^1.19.8",
     "@types/vue": "^2.0.0",
+    "autoprefixer": "^9.8.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "autoprefixer": "^9.7.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-typescript-vue": "^1.1.1",
@@ -100,5 +102,12 @@
     "hooks": {
       "pre-commit": "npm run test && npm run lint"
     }
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "not dead",
+    "last 5 version",
+    "not IE < 10",
+    "iOS >= 11"
+  ]
 }

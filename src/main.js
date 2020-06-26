@@ -1,5 +1,5 @@
-// import "@styles/main.scss";
-import "@styles/main.less";
+import "@styles/main.scss";
+//import "@styles/main.less";
 
 import {App} from "@main/app";
 
