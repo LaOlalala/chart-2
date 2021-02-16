@@ -1,20 +1,89 @@
 {% extends './_layout.njk' %}
 
 {% block content %}
-    <div class="welcome">
-        <div class="welcome__image">
-            <div class="welcome__image-label">
-            </div>
-        </div>
+    <div style="padding: 100px;">
 
-        <div class="demos">
-            <div class="demos--vue">
-                <div id="vue-js-app"></div>
-                <div id="vue-ts-app"></div>
-                <div id="react-stateless-app"></div>
-                <div id="react-stateful-app"></div>
-                <div id="react-mobx-app"></div>
+        <h1 style="">Тип 1</h1>
+        <h2>Динамика продаж</h2>
+        <a href="/" class="chart-container chart-container_type1">
+            <canvas class="js-chart-type1" data-previous="[6,6,4, ,10,10]" data-present="[3,7,8, ,10,12]" data-labels="[Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь]" data-years="[2019, 2020]"></canvas>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 2</h1>
+        <h2>Новинки</h2>
+        <a href="/" class="chart-container chart-container_type2">
+            <canvas class="js-chart-type2" data-data="[83,17]"></canvas>
+            <div class="chart-container__percent" >83%</div>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 3</h1>
+        <h2>Дебиторская задолженность</h2>
+        <a href="/" class="chart-container chart-container_type3 js-chart-type3" data-percent="75.3">
+            <div class="chart-container__line-outer">
+                <div class="chart-container__line-inner">
+                    <div class="chart-container__line-wrap">
+                        <div class="chart-container__line-percent">75.3%</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 4</h1>
+        <h2>Хит-лист представленность</h2>
+        <a href="/" class="chart-container chart-container_type4">
+            <canvas class="js-chart-type4" data-data="[15,85]" data-labels="[Отгруженные товары, Отсутствуют в ассортименте]"></canvas>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 4</h1>
+        <h2>Исполнение заказов</h2>
+        <h3>15.02.2021</h3>
+        <a href="/" class="chart-container chart-container_type4">
+            <canvas class="js-chart-type4" data-data="[25,75]" data-labels="[Отгружено, Остальные статусы]"></canvas>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 4</h1>
+        <h2>Сезонные товары представленность</h2>
+        <a href="/" class="chart-container chart-container_type4">
+            <canvas class="js-chart-type4" data-data="[75,25]" data-labels="[Отгружено сезонных товаров, Отсутствует в отгрузках]"></canvas>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 2</h1>
+        <h2>% выполнения текущих акций</h2>
+        <a href="/" class="chart-container chart-container_type2">
+            <canvas class="js-chart-type2" data-data="[83.1,16.9]" data-colored></canvas>
+            <div class="chart-container__percent chart-container__percent_top">
+                <div class="">83.1%</div>
+                <div class="chart-container__total" >
+                    <div class="chart-container__total-text">всего акций</div>
+                    <div class="chart-container__total-number">4</div>
+                </div>
+            </div>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 5</h1>
+        <h2>Торговое оборудование</h2>
+        <a href="/" class="chart-container chart-container_type5">
+            <canvas class="js-chart-type5" data-data="[6,6,4]" data-labels="[Эффективное оборудование, Неэффективное оборудование, Не подтверждено]"></canvas>
+            <div class="chart-container__percent chart-container__percent_center">
+                <div class="chart-container__number">16</div>
+                <div class="chart-container__total" >
+                    <div class="chart-container__total-text">единиц получено</div>
+                </div>
+            </div>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 6</h1>
+        <h2>Динамика средней эффективности акций</h2>
+        <a href="/" class="chart-container chart-container_type6">
+            <canvas class="js-chart-type6" data-data="[90,30,50,60,0,50,70,90,0,80,30,95]" data-amount="[1,4,5,3,6,7,3,4,5,2,0,5]" data-labels="[01/20, 02/20, 03/20, 04/20, 05/20, 06/20, 07/20, 08/20, 09/20, 10/20, 11/20, 12/20]"></canvas>
+        </a>
+
+        <h1 style="margin-top: 100px">Тип 7</h1>
+        <h2>Текущие акции</h2>
+        <a href="/" class="chart-container chart-container_type2">
+            <canvas class="js-chart-type7" data-data="[90,10]"></canvas>
+            <div class="chart-container__percent chart-container__percent_bottom">90%</div>
+        </a>
+
     </div>
 {% endblock %}
