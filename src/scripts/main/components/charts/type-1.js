@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         label: yearsArr[0],
                         data: dataPreviousArr,
                         backgroundColor: function() {
-                            return  "rgba(13, 83, 152, 0.5)";
+                            return  "rgba(13, 83, 152, 1)";
                         },
                         borderColor: function() {
                             return  "rgba(13, 83, 152, 1)";
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         label: yearsArr[1],
                         data: dataPresentArr,
                         backgroundColor: function() {
-                            return  "rgba(245, 91, 35, 0.5)";
+                            return  "rgba(245, 91, 35, 1)";
                         },
                         borderColor: function() {
                             return  "rgba(245, 91, 35, 1)";
